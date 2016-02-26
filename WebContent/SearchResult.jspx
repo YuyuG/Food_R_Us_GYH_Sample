@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+	<jsp:directive.page contentType="text/html; charset=UTF-8"
+		pageEncoding="UTF-8" session="false" />
+	<jsp:output doctype-root-element="html"
+		doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"
+		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+		omit-xml-declaration="true" />
+	<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:c="http://java.sun.com/jsp/jstl/core"
+		xmlns:f="http://java.sun.com/jsp/jstl/fmt"
+		xmlns:my="urn:jsptld:/WEB-INF/taglib.tld">
+	
+	
+<head>
+
+<meta charset="utf-8" />
+<title>FoodRUs</title>
+<meta name="description" content="" />
+<meta name="author" content=""></meta>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+	rel="stylesheet" type="text/css" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="res/normalize.css" />
+<link rel="stylesheet" href="res/skeleton.css" />
+<link rel="stylesheet" href="res/custom.css" />
+
+<link rel="icon" type="image/png" href="" />
+</head>
+
+<body>
+	<!--browser must submit the form to the same server from which the form was retrieved  -->
+	<!-- Header -->
+	<nav class="navbar">
+                <div class="container">
+                    <ul class="navbar-list">
+                        <li class="navbar-item" id="logo"><a class="navbar-link" href="Index">Food<span style="color: #699C0C">R</span>US</a></li>
+                        
+                        <li class="navbar-item"><a class="navbar-link" href="Cart"><i class="fa fa-shopping-cart"></i>${cartCount}</a></li>
+                        <li class="navbar-item"><a class="navbar-link" href="#"><i class="fa fa-user"></i></a></li>
+                        <c:choose>
+                        <c:when test="${user == null}">
+                        <li class="navbar-item"><a class="navbar-link" href="Login">LOGIN</a></li>
+                    	</c:when>
+                    	<c:otherwise>
+                    	<li class="navbar-item"><p>Welcome, ${user}</p></li>
+                    	</c:otherwise>
+                    	</c:choose>
+                    </ul>
+                </div>
+            </nav>
+            
+     <!-- Header End -->
+    
+						
+			<div class="container">
+            <div class="row">
+                <img src="res/cover.jpg" width="100%" class="cover-sm"/>
+                <h1 id="catalog-name">Search Result</h1>
+            </div>
+
+            <div class="row wrapper-big">
+            	
+                <div class="row">
+                <c:choose>
+                    <c:when test="${not empty recco}">
+                    
+           				<h6>Reccommended item: TRY ${recco.name}!</h6>
+           				<h6 id="message"></h6>
+                    
+                    </c:when>
+                    
+                    </c:choose>
+                <c:forEach var="item" items="${searchResult}">
+                	<div class="twelve columns">
+                    <div class="card-panel">
+                        <div class="card-content">
+                           <h3>${item.name}</h3>
+                            <p><b>ProductID: </b>${item.number}<br></br>
+                               <b>Product Quantity: </b>${item.qty}<br></br>
+                               <b>Category ID: </b>${item.catID}<br></br>
+                            <f:formatNumber type="currency">${item.price}</f:formatNumber>
+                            
+                            </p>
+                            <!-- <input class="little-quantity" type="text" 
+                            	name="qty${item.number}" id="qty${item.number}" value="1" /> -->
+                            <!-- <input class="button" type="button" name="updateQty" id="updateQty${item.number}" value="Update" />  -->
+                            <!-- <input class="button" type="button" name="qtyc${item.number}" id="qtyc${item.number}" value="Add to Cart" /> -->
+                            <a href="AddItem?productID=${item.number}&amp;catID=${item.catID}" class="button">Add to cart</a> 
+                        </div>
+                   	 </div>
+               		 </div>
+               		
+               	</c:forEach>
+               	 </div>
+            
+            </div>
+        </div>
+							<a href="#" class="button">Back to Top</a>
+							<a href="Index" class="button">Back to Categories</a>
+						
+	
+</body>
+	</html>
+</jsp:root>

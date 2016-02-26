@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="PO.xsd"?>
+<order id="1" submitted="2015-12-06T19:24:39.406-05:00">
+    <customer account="accountgyh92">
+        <customer>customergyh92</customer>
+    </customer>
+    <items>
+        <item number="2002H063">
+            <name>Semi-Cheddar Cheese by JC</name>
+            <price>4.26</price>
+            <quantity>1</quantity>
+            <extended>4.26</extended>
+        </item>
+    </items>
+    <total>4.26</total>
+    <shipping>5.0</shipping>
+    <HST>0.5538</HST>
+    <grandTotal>4.8138</grandTotal>
+</order>

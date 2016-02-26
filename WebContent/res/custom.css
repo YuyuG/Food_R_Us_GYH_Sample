@@ -1,0 +1,289 @@
+/**custom css**/
+
+.wrapper {
+    margin: 20px;
+}
+
+.wrapper-big {
+    margin-top: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* CATALOG CARDS */
+
+.card-panel {
+    transition: box-shadow .25s;
+    padding: 20px;
+    margin: 0.5rem 0 1rem 0;
+    border-radius: 2px;
+    background-color: #F7F5F5;
+}
+
+.card {
+    position: relative;
+    margin: 0.5rem 0 1rem 0;
+    background-color: black;
+    transition: box-white .25s;
+    border-radius: 2px;
+}
+
+.card .card-title {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.card .card-title.activator {
+    cursor: pointer;
+}
+
+.card .card-image {
+    position: relative;
+}
+
+.card .card-image img {
+    display: block;
+    border-radius: 2px 2px 0 0;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.card .card-image .card-title {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    text-shadow: 2px 2px 10px black
+}
+.card-content > h3 {
+    color: black;
+}
+
+#white {
+    color: white;
+}
+
+.card-content > p {
+    color: black;
+}
+
+.card .card-content {
+    padding: 20px;
+    border-radius: 0 0 2px 2px;
+}
+
+.card .card-content,
+.card-panel p {
+    margin: 0;
+}
+
+.card .card-content .card-title {
+    line-height: 48px;
+}
+
+.card .card-action {
+    border-top: 1px solid rgba(160, 160, 160, 0.2);
+    padding: 20px;
+}
+
+.card .card-action a {
+    color: #699C0C;
+    margin-right: 20px;
+    -webkit-transition: color .3s ease;
+    -moz-transition: color .3s ease;
+    -o-transition: color .3s ease;
+    -ms-transition: color .3s ease;
+    transition: color .3s ease;
+}
+
+.card .card-action a:hover {
+    color: #ffd8a6;
+}
+
+
+/* NAV BAR */
+
+#logo {
+    padding-left: 20px;
+    float: left;
+}
+
+.navbar {
+    border-top-width: 0;
+}
+
+.navbar {
+    display: block;
+    width: 100%;
+    height: 6.5rem;
+    background: black;
+    z-index: 999;
+    position: fixed;
+}
+
+.navbar > .container {
+    width: 100%;
+}
+
+.navbar-list {
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.navbar-item {
+    position: relative;
+    float: right;
+    margin-bottom: 0;
+}
+
+.navbar-link {
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    margin-right: 35px;
+    text-decoration: none;
+    line-height: 6.5rem;
+    color: white;
+}
+
+.navbar-link.active,
+.navbar-link:hover {
+    color: #699C0C;
+}
+
+.has-docked-nav .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.has-docked-nav .navbar-spacer {
+    display: block;
+}
+
+
+/* Re-overiding the width 100% declaration to match size of % based container */
+
+.has-docked-nav .navbar > .container {
+    width: 80%;
+}
+
+.cover {
+    margin-top: -400px;
+    position: relative;
+}
+h2 {
+    
+margin-top: 18%;
+margin-left: 40%;
+width: 30%;
+}
+h1 {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    margin: auto;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px black;
+}
+
+#catalog-name {
+    position: absolute;
+    top: 100px;
+    width: 10%;
+    margin: auto;
+    color: white;
+    text-align: left;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px black;
+    margin-left: 10%;
+}
+
+h5 {
+    position: absolute;
+    top: 260px;
+    margin: auto;
+    width: 50%;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    left: 25%;
+    text-shadow: 2px 2px 10px black;
+}
+
+h3 {
+    color: white;
+}
+
+#search {
+    position: absolute;
+    top: 350px;
+    margin: auto;
+    width: 20%;
+    left: 40%;
+}
+
+.cover-sm {
+    position: absolute;
+    clip: rect(0px, 5000px, 200px, 0px);
+}
+
+.left {
+    margin-left: 70%;
+}
+
+#search-top-left {
+    position: absolute;
+    top: 100px;
+    width: 20%;
+    left: 70%;
+}
+
+.cart-container{
+    background-color: #F7F5F5;
+    width: 76%;
+    height: 100%;
+    margin: auto;
+    padding: 2%;
+}
+
+#no-bottom {
+    margin-bottom: 0; 
+}
+
+.dark-green {
+    font-weight: 700;
+    color:#416107;
+}
+
+.light-green {
+    font-weight: 700;
+    color:#699C0C;
+}
+
+.shimmy-down {
+    margin-top: 3%;
+}
+
+.bolded {
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+.little-quantity {
+    width: 50px;
+}
+
+#sm {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+}

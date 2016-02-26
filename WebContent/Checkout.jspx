@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+	<jsp:directive.page contentType="text/html; charset=UTF-8" 
+		pageEncoding="UTF-8" session="false"/>
+	<jsp:output doctype-root-element="html"
+		doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"
+		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+		omit-xml-declaration="true" />
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:c="http://java.sun.com/jsp/jstl/core"
+	  xmlns:f="http://java.sun.com/jsp/jstl/fmt"
+	  xmlns:my="urn:jsptld:/WEB-INF/taglib.tld">
+
+<head>
+    <meta charset="utf-8" />
+    <title>FoodRUs</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="res/normalize.css" />
+    <link rel="stylesheet" href="res/skeleton.css" />
+    <link rel="stylesheet" href="res/custom.css" />
+
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+
+<body>
+    <div class="container">
+    <form action="" method="POST">
+        <div class="row">
+            <nav class="navbar">
+                <div class="container">
+                    <ul class="navbar-list">
+                        <li class="navbar-item" id="logo"><a class="navbar-link" href="Index">Food<span style="color: #699C0C">R</span>US</a></li>
+                        <li class="navbar-item"><a class="navbar-link" href="Cart"><i class="fa fa-shopping-cart"></i>${cartCount}</a></li>
+                        <li class="navbar-item"><a class="navbar-link" href="#"><i class="fa fa-user"></i></a></li>
+                        <li class="navbar-item"><a class="navbar-link" href="#">LOGIN</a></li>
+                    </ul>
+                </div>
+            </nav>
+				
+            <div class="row">
+                <img src="res/cover.jpg" width="100%" class="cover-sm"/>
+                <input id="search-top-left" type="search" placeholder="Search for Items                         &#xF002;" style="font-family:Arial, FontAwesome"/>
+            </div>
+		
+            <div class="row wrapper">
+                <h2>Checkout</h2>
+                  <p style="color: red" name="error" id="error">${error}</p>
+                <hr width="80%"/>
+                <div class="cart-container">
+                
+                    <div class="row">
+                        <div class="five columns">PRODUCT</div>
+                        <div class="two columns">PRICE</div>
+                        <div class="three columns">QUANTITY</div>
+                        <div class="two columns">TOTAL</div>
+                    </div>
+                   <hr/>
+                   <c:forEach items="${ipbl}" var="cartItem">
+                   
+                    <div class="row">
+                        <div class="five columns">
+                            <h4 class="dark-green" id="no-bottom">${cartItem.ib.name}</h4>
+                            <h6 id="no-bottom">Product ID: ${cartItem.ib.number}</h6>
+                            <h6 id="no-bottom">Quantities per order: ${cartItem.ib.qty}</h6>
+                            <h6 id="no-bottom">Category:<span class="light-green"> ${cartItem.ib.catID}</span></h6>
+                        </div>
+                        <div class="two columns shimmy-down bolded"><f:formatNumber type="currency">${cartItem.ib.price}</f:formatNumber></div>
+                        <div class="three columns shimmy-down">
+                          
+         				<div class="two columns shimmy-down bolded">${cartItem.units}</div>
+                        </div>
+                        <div class="two columns light-green bolded shimmy-down"><f:formatNumber type="currency">${cartItem.extendedPrice}</f:formatNumber></div>
+                    </div>
+                    
+                  
+                    <hr/>
+                 </c:forEach>
+                    
+               
+                </div>
+            </div>
+        </div>
+        <br />
+       	<h6 align="right" name="subtotal" id="subtotal"><b>Subtotal: </b>
+                            <f:formatNumber type="currency">${subtotal}</f:formatNumber></h6><br />
+       	<h6 align="right" name="hst" id="hst">><b>HST:</b>
+       						<f:formatNumber type="currency">${hst}</f:formatNumber></h6><br />
+       	<h6 align="right" name="grandtotal" id="grandtotal">><b>GrandTotal:</b>
+       						<f:formatNumber type="currency">${grandtotal}</f:formatNumber></h6><br />
+       	
+        
+        <a href="Index" class="button">Continue Shopping</a>
+        <a href="Cart?cancel=cancelorder" class="button">Cancel Order</a>
+        <a href="OutputPO" class="button">Check Out</a>
+								
+   </form>
+    </div>
+    	
+
+
+
+</body>
+</html>
+</jsp:root>

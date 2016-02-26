@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+	<jsp:directive.page contentType="text/html; charset=UTF-8"
+		pageEncoding="UTF-8" session="false" />
+	<jsp:output doctype-root-element="html"
+		doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"
+		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+		omit-xml-declaration="true" />
+	<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:c="http://java.sun.com/jsp/jstl/core"
+		xmlns:f="http://java.sun.com/jsp/jstl/fmt"
+		xmlns:my="urn:jsptld:/WEB-INF/taglib.tld">
+
+<head>
+<meta charset="utf-8" />
+<title>FoodRUs</title>
+<meta name="description" content="" />
+<meta name="author" content="" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+	rel="stylesheet" type="text/css" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="res/normalize.css" />
+<link rel="stylesheet" href="res/skeleton.css" />
+<link rel="stylesheet" href="res/custom.css" />
+
+<link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+<body>
+<header>
+	<div align="center">
+		<H2>
+			<span>Congratulations!</span>
+		</H2>
+		<H4>
+			<span>Your order has been placed!</span>
+		</H4>
+	</div>
+</header>
+<div align="center">
+	<a href="${fileName}" class="button"><span>View Order Report</span></a> <br />
+	<a href="Index">Continue Shopping</a>
+</div>
+	</body>
+</html>
+</jsp:root>

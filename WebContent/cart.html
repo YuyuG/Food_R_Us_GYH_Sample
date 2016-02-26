@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>FoodRUs</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <nav class="navbar">
+                <div class="container">
+                    <ul class="navbar-list">
+                        <li class="navbar-item" id="logo"><a class="navbar-link" href="#">Food<span style="color: #699C0C">R</span>US</a></li>
+                        <li class="navbar-item"><a class="navbar-link" href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        <li class="navbar-item"><a class="navbar-link" href="#"><i class="fa fa-user"></i></a></li>
+                        <li class="navbar-item"><a class="navbar-link" href="#">LOGIN</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="row">
+                <img src="images/cover.jpg" width="100%" class="cover-sm">
+                <input id="search-top-left" type="search" placeholder="Search for Items                         &#xF002;" style="font-family:Arial, FontAwesome">
+            </div>
+
+            <div class="row wrapper">
+                <h2>Shopping Cart</h2>
+                <hr width="80%">
+                <div class="cart-container">
+                    <div class="row">
+                        <div class="five columns">PRODUCT</div>
+                        <div class="two columns">PRICE</div>
+                        <div class="three columns">QUANTITY</div>
+                        <div class="two columns">TOTAL</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="five columns">
+                            <h4 class="dark-green" id="no-bottom">Aniseed Syrup</h4>
+                            <h6 id="no-bottom">Product ID: xxxx</h6>
+                            <h6 id="no-bottom">Quantities per order: xxxx</h6>
+                            <h6 id="no-bottom">Category:<span class="light-green"> Beverages</span></h6>
+                        </div>
+                        <div class="two columns shimmy-down bolded">$10.00</div>
+                        <div class="three columns shimmy-down">
+                            <button id="sm" onclick='javascript: document.getElementById("qty").value--;' value='-'>-</button>
+                            <input class="little-quantity" type='text' name='qty' id='qty' />
+                            <button id="sm" onclick='javascript: document.getElementById("qty").value++;' value='+'>+</button>
+                        </div>
+                        <div class="two columns light-green bolded shimmy-down">$10.00</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="five columns">
+                            <h4 class="dark-green" id="no-bottom">Aniseed Syrup</h4>
+                            <h6 id="no-bottom">Product ID: xxxx</h6>
+                            <h6 id="no-bottom">Quantities per order: xxxx</h6>
+                            <h6 id="no-bottom">Category:<span class="light-green"> Beverages</span></h6>
+                        </div>
+                        <div class="two columns shimmy-down bolded">$10.00</div>
+                        <div class="three columns">
+                            <button id="sm" onclick='javascript: document.getElementById("qty").value--;' value='-'>-</button>
+                            <input class="little-quantity" type='text' name='qty' id='qty' />
+                            <button id="sm" onclick='javascript: document.getElementById("qty").value++;' value='+'>+</button>
+                        </div>
+                        <div class="two columns light-green bolded shimmy-down">$10.00</div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
